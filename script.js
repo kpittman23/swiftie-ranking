@@ -55,6 +55,7 @@ let allAlbums = {
 let headers = ['Song', 'Album', 'Ranking Status'];
 
 let table = document.createElement('table');
+table.style = "margin-left: auto;margin-right: auto;";
 let headerRow = document.createElement('tr');
 
 headers.forEach(headerText => {

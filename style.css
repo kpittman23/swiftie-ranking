@@ -1,22 +1,120 @@
-body {
+
+.rightDiv {
+    color: #000;
+    height: 400px;
+    width: 29%;
+    float: right;
+    font-family:'Roboto',sans-serif;
+}
+.leftDiv {
+    color: #000;
+    height: 400px;
+    width: 69%;
+    float: left;
+    font-family:'Roboto',sans-serif;
+}
+.outerDiv {
+    margin: 0px auto;
+    padding: 5px;
+}
+.textboxDiv {
+    padding: 10px;
+}
+.textboxes {
+    height: 70px;
+    width: 75%;
+    font-family:'Roboto',sans-serif;
+}
+/* Style the tab */
+.btn-group {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+/* Style the buttons inside the tab */
+.btn-group button {
+    background: #ffffff;
     text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    border-color: black;
+    border-width: thin;
 }
 
-div {
-    display: inline-block;
+/* Change background color of buttons on hover */
+.btn-group button:hover {
+    background-color: #ddd;
 }
 
-button {
+/* Create an active/current tablink class */
+.btn-group button.active {
+    background-color: #ccc;
+}
+
+ul {
+    height: 100%;
+    width: 14vw;
+    overflow: auto;
+    border: 1px solid black;
+    border-radius: 2px;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 2px;
+    margin: 1px;
+}
+
+li {
+}
+
+.area {
+    width: 99vw;
+    height: 80vh;
+    float: left;
+}
+
+#content {
+    width: 52vw;
+}
+
+#consoleOut {
+    width: 30vw;
+}
+
+.submitButton {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #b8b8b8;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+}
+.submitButton:hover{
+    color:#000000;
+    background-color:#FFFFFF;
 }
 
 #table {
     display: block;
     margin-top: 20px;
+    font-family:'Roboto',sans-serif;
 }
 
 th, td {
     border: 1px solid black;
     padding: 5px;
+    font-family:'Roboto',sans-serif;
 }

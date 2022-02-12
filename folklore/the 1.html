@@ -1,101 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Save form Data in a Text File using JavaScript</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-    	div {
-            padding: 10px;
-            background-color: #f6f6f6;
-            overflow: hidden;
-        }
-    	input[type=text], textarea, select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type=button]{ 
-            width: auto;
-            float: right;
-            cursor: pointer;
-            padding: 7px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>the 1</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <script type="text/javascript" src="../function.js"></script>
 </head>
+
 <body>
-    <div>
-        
-        <!--Add few elements to the form-->
+    <div class="outerDiv">
+        <h1 style="text-align:center;font-family:'Roboto',sans-serif;">the 1</h1>
+        <div class="leftDiv">
+            <div>
+                <h3>Rate this song:</h3>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">1</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">2</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">3</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">4</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">5</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">6</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">7</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">8</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">9</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">10</button>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="strenghts" name="strenghts" placeholder="Strenghts" class="textboxes"></textarea>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="weaknesses" name="weaknesses" placeholder="Weaknesses" class="textboxes"></textarea>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="notes" name="notes" placeholder="Notes" class="textboxes"></textarea>
+            </div>
+            <div>
+                <input type="button" class="submitButton" id="bt" value="Submit" onclick="commitAndPush()" />
+            </div>
+        </div>
 
-        <div>
-            <input type="text" id="txtName" placeholder="Enter your name" />
-        </div>
-        <div>
-            <input type="text" id="txtAge" placeholder="Enter your age" />
-        </div>
-        <div>
-            <input type="text" id="txtEmail" placeholder="Enter your email address" />
-        </div>
-        <div>
-            <select id="selCountry">
-                <option selected value="">-- Choose the country --</option>
-                <option value="India">India</option>
-                <option value="Japan">Japan</option>
-                <option value="USA">USA</option>
-            </select>
-        </div>
-        <div>
-            <textarea id="msg" name="msg" placeholder="Write some message ..." style="height:100px"></textarea>
-        </div>
-
-        <!--Add to button to save the data.-->
-        <div>
-            <input type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+        <div class="rightDiv">
+            <h3>Fun facts and stuff</h3>
+            <li>This is the first fact</li>
+            <li>This is the second fact</li>
+            <br/>
+            <a href="https://genius.com/Taylor-swift-tied-together-with-a-smile-lyrics">Lyrics</a>
+            <br/>
+            <a href="https://genius.com/Taylor-swift-tied-together-with-a-smile-lyrics">Music Video</a>
         </div>
     </div>
 </body>
-<script>
-    let saveFile = () => {
-    	
-        // Get the data from each element on the form.
-    	const name = document.getElementById('txtName');
-        const age = document.getElementById('txtAge');
-        const email = document.getElementById('txtEmail');
-        const country = document.getElementById('selCountry');
-        const msg = document.getElementById('msg');
-        
-        // This variable stores all the data.
-        let data = 
-            ' Name: ' + name.value + ' 
- ' + 
-            'Age: ' +age.value + ' 
- ' + 
-            'Email: ' + email.value + ' 
- ' + 
-            'Country: ' + country.value + ' 
- ' + 
-            'Message: ' + msg.value;
-        
-        // Convert the text to BLOB.
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';	   // The file to save the data.
 
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
-
-        newLink.click(); 
-    }
-</script>
 </html>
