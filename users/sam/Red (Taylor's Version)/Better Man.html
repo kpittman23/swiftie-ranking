@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Better Man</title>
+    <link rel="stylesheet" href="../../../style.cs" type="text/css">
+    <script type="text/javascript" src="../../../function.js"></script>
+</head>
+
+<body>
+    <div class="outerDiv">
+        <h1 style="text-align:center;font-family:'Roboto',sans-serif;">Better Man</h1>
+        <div class="leftDiv">
+            <div>
+                <h3>Rate this song:</h3>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">1</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">2</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">3</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">4</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">5</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">6</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">7</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">8</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">9</button>
+                <button type="button" class="btn btn-outline-primary" onClick="selectButton(event)">10</button>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="strenghts" name="strenghts" placeholder="Strenghts" class="textboxes"></textarea>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="weaknesses" name="weaknesses" placeholder="Weaknesses" class="textboxes"></textarea>
+            </div>
+            <div class="textboxDiv">
+                <textarea id="notes" name="notes" placeholder="Notes" class="textboxes"></textarea>
+            </div>
+            <div>
+                <input type="button" class="submitButton" id="bt" value="Submit" onclick="commitAndPush()" />
+            </div>
+        </div>
+
+        <div class="rightDiv">
+            <h3>Fun facts and stuff</h3>
+            <li>This is the first fact</li>
+            <li>This is the second fact</li>
+            <br/>
+            <a href="https://genius.com/Taylor-swift-tied-together-with-a-smile-lyrics">Lyrics</a>
+            <br/>
+            <a href="https://genius.com/Taylor-swift-tied-together-with-a-smile-lyrics">Music Video</a>
+        </div>
+    </div>
+</body>
+
+</html>

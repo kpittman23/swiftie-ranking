@@ -118,3 +118,30 @@ th, td {
     padding: 5px;
     font-family:'Roboto',sans-serif;
 }
+
+select {
+    display: block;
+    margin: 0 auto;
+}
+
+.selectUser {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.selectUserButton {
+    display:block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #b8b8b8;
+    margin: auto;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+}

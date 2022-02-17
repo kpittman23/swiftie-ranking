@@ -79,3 +79,16 @@ function selectButton(evt) {
     }
     evt.currentTarget.className += " active";
 }
+
+function selectUser() {
+    var select = document.getElementById('selectUser');
+    var option = select.options[select.selectedIndex];
+
+    var selectedUser = option.value;
+    console.log(selectedUser);
+
+    var url = "users/" + selectedUser + "/table.html";
+    console.log(url);
+
+    window.open(url);
+}
