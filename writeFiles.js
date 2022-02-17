@@ -64,7 +64,7 @@ for (let albumName of albumNames) {
 <head>
     <meta charset="UTF-8">
     <title>${song}</title>
-    <link rel="stylesheet" href="../../../style.cs" type="text/css">
+    <link rel="stylesheet" href="../../../style.css" type="text/css">
     <script type="text/javascript" src="../../../function.js"></script>
 </head>
 
