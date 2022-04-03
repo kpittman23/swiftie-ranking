@@ -36,7 +36,7 @@ function getUserInfo() {
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
+    githubApi.header.Authorization = "token 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";
 }
 
 function cout(str) {
@@ -45,8 +45,10 @@ function cout(str) {
 
 function commitAndPush() {
     getUserInfo();
+    var currentUser = localStorage.getItem("user");
+    console.log(currentUser);
 
-    githubApi.path = "data/katey/" + document.title + ".txt";
+    githubApi.path = "data/" + currentUser + "/" + document.title + ".txt";
 
     var ranking = document.getElementsByClassName("btn btn-outline-primary active")[0].innerHTML;
     var strengths = document.getElementById("strengths");
@@ -85,9 +87,10 @@ function selectUser() {
     var option = select.options[select.selectedIndex];
 
     var selectedUser = option.value;
+    localStorage.setItem("user", selectedUser);
     console.log(selectedUser);
 
-    var url = "users/" + selectedUser + "/table.html";
+    var url = "users/katey/table.html";
     console.log(url);
 
     window.open(url);
