@@ -11,7 +11,7 @@ let fearless = ['Fearless', 'Fifteen', 'Love Story', 'Hey Stephen', 'White Horse
     'Today Was A FairyTale', 'You All Over Me', 'Mr. Perfectly Fine', 'We Were Happy', 'That\'s When',
     'Don\'t You', 'Bye Bye Baby'];
 let speakNow = ['Mine', 'Sparks Fly', 'Back To December', 'Speak Now', 'Dear John', 'Mean',
-    'The Story Of Us', 'Never Grown Up', 'Enchanted', 'Better Than Revenge', 'Innocent', 'Haunted',
+    'The Story Of Us', 'Never Grow Up', 'Enchanted', 'Better Than Revenge', 'Innocent', 'Haunted',
     'Last Kiss', 'Long Live', 'Ours', 'If This Was A Movie', 'Superman'];
 let red = ['State Of Grace', 'Red', 'Tracherous', 'I Knew You Were Trouble', 'All Too Well', '22',
     'I Almost Do', 'We Are Never Ever Getting Back Together', 'Stay Stay Stay', 'The Last Time',
