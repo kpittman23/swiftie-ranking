@@ -13,10 +13,10 @@ let fearless = ['Fearless', 'Fifteen', 'Love Story', 'Hey Stephen', 'White Horse
 let speakNow = ['Mine', 'Sparks Fly', 'Back To December', 'Speak Now', 'Dear John', 'Mean',
     'The Story Of Us', 'Never Grow Up', 'Enchanted', 'Better Than Revenge', 'Innocent', 'Haunted',
     'Last Kiss', 'Long Live', 'Ours', 'If This Was A Movie', 'Superman'];
-let red = ['State Of Grace', 'Red', 'Tracherous', 'I Knew You Were Trouble', 'All Too Well', '22',
+let red = ['State Of Grace', 'Red', 'Treacherous', 'I Knew You Were Trouble', 'All Too Well', '22',
     'I Almost Do', 'We Are Never Ever Getting Back Together', 'Stay Stay Stay', 'The Last Time',
     'Holy Ground', 'Sad Beautiful Tragic', 'The Lucky One', 'Everything Has Changed (ft. Ed Sheeran)',
-    'Staright', 'Begin Again', 'The Moment I Knew', 'Come Back...Be Here', 'Girl At Home', 'Ronan',
+    'Starlight', 'Begin Again', 'The Moment I Knew', 'Come Back...Be Here', 'Girl At Home', 'Ronan',
     'Better Man', 'Nothing New', 'Babe', 'Message In A Bottle', 'I Bet You Think About Me',
     'Forever Winter', 'Run (ft. Ed Sheeran)', 'The Very First Night', 'All Too Well (10 Minute Version)'];
 let ninteenEightyNine = ['Welcome To New York', 'Blank Space', 'Style', 'Out Of The Woods',
