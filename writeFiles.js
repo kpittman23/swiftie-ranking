@@ -45,7 +45,7 @@ let allAlbums = {
     'Fearless (Taylor\'s Version)': fearless,
     'Speak Now': speakNow,
     'Red (Taylor\'s Version)': red,
-    'TS - 1989': ninteenEightyNine,
+    '1989': ninteenEightyNine,
     'Reputation': reputation,
     'Lover': lover,
     'folklore': folklore,

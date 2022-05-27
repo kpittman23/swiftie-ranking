@@ -6,6 +6,14 @@
     float: right;
     font-family:'Roboto',sans-serif;
 }
+.rightDiv2 {
+    color: #000;
+    height: 400px;
+    width: 50%;
+    float: right;
+    font-family:'Roboto',sans-serif;
+    text-align: left;
+}
 .leftDiv {
     color: #000;
     height: 400px;
@@ -13,6 +21,19 @@
     float: left;
     font-family:'Roboto',sans-serif;
 }
+.leftDiv2 {
+    color: #000;
+    height: 400px;
+    width: 50%;
+    float: left;
+    font-family:'Roboto',sans-serif;
+}
+.centerDiv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 .outerDiv {
     margin: 0px auto;
     padding: 5px;
