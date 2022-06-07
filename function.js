@@ -90,7 +90,7 @@ function selectUser() {
     localStorage.setItem("user", selectedUser);
     console.log(selectedUser);
 
-    var url = "users/katey/table.html";
+    var url = "users/tiles.html";
     console.log(url);
 
     window.open(url);
