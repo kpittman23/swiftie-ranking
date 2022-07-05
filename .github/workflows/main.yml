@@ -15,16 +15,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
-    - name: Build
-      run: |
-        npm install
-        npm run-script build
-      env:
-        GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
-
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.0.0
       with:
         GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
         BRANCH: gh-pages
         FOLDER: build
+      env:
+        GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
