@@ -57,7 +57,7 @@ function checkCompletionStatus(redtv) {
     githubApi.baseUrl = "https://api.github.com";
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = `token ${process.env.GITHUBTOKEN}';
+    githubApi.header.Authorization = `token ${process.env.GITHUBTOKEN}`;
     githubApi.sha = "";
     githubApi.path = "";
     githubApi.newFile = true;
