@@ -20,8 +20,8 @@ function apiRequest(method, url, jsonData, callback) {
                 callback(xhr.responseText);
             }
             else {
-                cout(xhr.status);
-                cout(xhr.responseText);
+                console.log(xhr.status);
+                console.log(xhr.responseText);
             }
         }
     }
@@ -36,17 +36,12 @@ function getUserInfo() {
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
-}
-
-function cout(str) {
-    console.log(str);
+    githubApi.header.Authorization = "token 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";
 }
 
 function commitAndPush() {
     getUserInfo();
     var currentUser = localStorage.getItem("user");
-    // console.log(currentUser);
 
     githubApi.path = "data/" + currentUser + "/" + document.title + ".txt";
 
@@ -58,7 +53,6 @@ function commitAndPush() {
     var data = "Ranking: " + ranking + "\nStrengths: " + strengths +
         "\nWeaknesses: " + weaknesses + "\nNotes: " + notes;
 
-    // console.log(data);
     var jsonData = new Object();
     jsonData.message = "data upload";
     jsonData.content = btoa(data); //encode64tim
@@ -67,9 +61,9 @@ function commitAndPush() {
 
     var url = githubApi.baseUrl + "/repos/" + githubApi.username + "/" + githubApi.nameRepo + "/contents/" + githubApi.path;
     jsonData = JSON.stringify(jsonData); //api expects json as string
-    cout(jsonData);
+    console.log(jsonData);
     apiRequest("PUT", url, jsonData, function (r) {
-        cout(r);
+        console.log(r);
     });
 }
 

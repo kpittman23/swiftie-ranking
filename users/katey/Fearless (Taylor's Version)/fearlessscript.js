@@ -37,8 +37,8 @@ function apiRequest(method, githubApi, url, jsonData, callback) {
                 callback(xhr.responseText);
             }
             else {
-                cout(xhr.status);
-                cout(xhr.responseText);
+                console.log(xhr.status);
+                console.log(xhr.responseText);
             }
         }
     }
@@ -57,7 +57,7 @@ function checkCompletionStatus(fearless) {
     githubApi.baseUrl = "https://api.github.com";
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
+    githubApi.header.Authorization = "token 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";
     githubApi.sha = "";
     githubApi.path = "";
     githubApi.newFile = true;
