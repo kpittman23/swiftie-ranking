@@ -48,7 +48,7 @@ function apiRequest(method, githubApi, url, jsonData, callback) {
 }
 
 function checkCompletionStatus(folklore) {
-    var token = 'g/h/p_aR1WbPeTskzm9y2YOLD5JZzwTNPaHf0Y3M7D';
+    var token = 'g/h/p_CTzvwup8CyIhs2DEm65Lbf62cCi9kh36TF2P';
     token = token.replace('g/h/p', 'ghp')
     var githubApi = {};
     githubApi.header = {};

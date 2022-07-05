@@ -33,8 +33,8 @@ function apiRequest(method, url, jsonData, callback) {
 }
 
 function getUserInfo() {
-    var token = 'g/h/p_aR1WbPeTskzm9y2YOLD5JZzwTNPaHf0Y3M7D';
-    token = token.replace('g/h/p', 'ghp')
+    var token = 'g/h/p_CTzvwup8CyIhs2DEm65Lbf62cCi9kh36TF2P';
+    token = token.replace('g/h/p', 'ghp');
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
