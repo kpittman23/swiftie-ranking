@@ -36,7 +36,7 @@ function getUserInfo() {
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
+    githubApi.header.Authorization = `token ${process.env.GITHUBTOKEN}';
 }
 
 function commitAndPush() {

@@ -55,7 +55,7 @@ function checkCompletionStatus(reputation) {
     githubApi.baseUrl = "https://api.github.com";
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
+    githubApi.header.Authorization = `token ${process.env.GITHUBTOKEN}';
     githubApi.sha = "";
     githubApi.path = "";
     githubApi.newFile = true;
