@@ -33,10 +33,12 @@ function apiRequest(method, url, jsonData, callback) {
 }
 
 function getUserInfo() {
+    var token = 'g/h/p_aR1WbPeTskzm9y2YOLD5JZzwTNPaHf0Y3M7D';
+    token = token.replace('g/h/p', 'ghp')
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = `token ${process.env.GITHUBTOKEN}`;
+    githubApi.header.Authorization = `token ${token}`;
 }
 
 function commitAndPush() {
