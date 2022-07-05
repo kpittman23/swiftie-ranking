@@ -72,7 +72,6 @@ let albumNames = Object.keys(allAlbums);
 for (let albumName of albumNames) {
     let album = allAlbums[albumName];
     for (let song of album) {
-        console.log(song);
         let row = document.createElement('tr');
         let col1 = document.createElement('th');
         col1.innerHTML = '<a href="'+albumName+'/'+song+'.html">'+song+'</a>';

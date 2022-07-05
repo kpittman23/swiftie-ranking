@@ -22,21 +22,80 @@ headers.forEach(headerText => {
 
 table.appendChild(headerRow);
 
-for (let song of fearless) {
-    console.log(song);
-    let row = document.createElement('tr');
-    let col1 = document.createElement('th');
-    col1.innerHTML = '<a href="' + song + '.html">' + song + '</a>';
-    let col2 = document.createElement('th');
-    col2.innerHTML = 'Fearless (Taylor\'s Version)';
-    let col3 = document.createElement('th');
-    col3.innerHTML = "Incomplete";
-
-    row.appendChild(col1);
-    row.appendChild(col2);
-    row.appendChild(col3);
-    table.appendChild(row);
-}
-
+checkCompletionStatus(fearless);
 
 myTable.appendChild(table);
+
+function apiRequest(method, githubApi, url, jsonData, callback) {
+
+    //load the json file
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200 || xhr.status == 201) {
+                callback(xhr.responseText);
+            }
+            else {
+                cout(xhr.status);
+                cout(xhr.responseText);
+            }
+        }
+    }
+    xhr.open(method, url, true);
+    for (var key in githubApi.header) {
+        xhr.setRequestHeader(key, githubApi.header[key]);
+    }
+    xhr.send(jsonData);
+}
+
+function checkCompletionStatus(fearless) {
+    var githubApi = {};
+    githubApi.header = {};
+    githubApi.header.Accept = "application/vnd.github.v3+json"; //make sure we use v3
+    githubApi.header.Authorization = "token <token>";
+    githubApi.baseUrl = "https://api.github.com";
+    githubApi.username = "kpittman23";
+    githubApi.nameRepo = "swiftie-ranking";
+    githubApi.header.Authorization = "token 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";
+    githubApi.sha = "";
+    githubApi.path = "";
+    githubApi.newFile = true;
+    var currentUser = localStorage.getItem("user");
+    var fileLocation = "data/" + currentUser + "/" + document.title + ".txt";
+    //get tree url from master branch's last commit
+    var url = githubApi.baseUrl + "/repos/" + githubApi.username + "/" + githubApi.nameRepo + "/branches/master";
+    apiRequest("GET", githubApi, url, null, function (r) {
+        var jsonRsp = JSON.parse(r);
+        var treeUrl = jsonRsp.commit.commit.tree.url + "?recursive=1";
+        console.log(fileLocation);
+        //get tree
+        apiRequest("GET", githubApi, treeUrl, null, function (r) {
+            var jsonRsp = JSON.parse(r);
+            var pathArray = [];
+            for (let obj of jsonRsp.tree) {
+                pathArray.push(obj.path);
+            }
+            for (let song of fearless) {
+                var fileLocation = "data/" + currentUser + "/" + song + ".txt";
+                var completionValue = "Incomplete";
+                if (pathArray.includes(fileLocation)) {
+                    completionValue = "Complete";
+                }
+                let row = document.createElement('tr');
+                let col1 = document.createElement('th');
+                col1.innerHTML = '<a href="' + song + '.html">' + song + '</a>';
+                let col2 = document.createElement('th');
+                col2.innerHTML = 'Fearless (Taylor\'s Version)';
+                let col3 = document.createElement('th');
+                console.log(completionValue);
+                col3.innerHTML = completionValue;
+
+                row.appendChild(col1);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                table.appendChild(row);
+            }
+        });
+    });
+}

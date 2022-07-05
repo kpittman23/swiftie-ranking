@@ -36,7 +36,7 @@ function getUserInfo() {
 
     githubApi.username = "kpittman23";
     githubApi.nameRepo = "swiftie-ranking";
-    githubApi.header.Authorization = "token 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";
+    githubApi.header.Authorization = "token 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";
 }
 
 function cout(str) {
@@ -46,7 +46,7 @@ function cout(str) {
 function commitAndPush() {
     getUserInfo();
     var currentUser = localStorage.getItem("user");
-    console.log(currentUser);
+    // console.log(currentUser);
 
     githubApi.path = "data/" + currentUser + "/" + document.title + ".txt";
 
@@ -58,7 +58,7 @@ function commitAndPush() {
     var data = "Ranking: " + ranking + "\nStrengths: " + strengths +
         "\nWeaknesses: " + weaknesses + "\nNotes: " + notes;
 
-    console.log(data);
+    // console.log(data);
     var jsonData = new Object();
     jsonData.message = "data upload";
     jsonData.content = btoa(data); //encode64tim
@@ -94,4 +94,24 @@ function selectUser() {
     console.log(url);
 
     window.open(url);
+}
+
+function checkCompletionStatus(song) {
+
+    getUserInfo();
+    //get tree url from master branch's last commit
+    var url = githubApi.baseUrl+"/repos/"+githubApi.username+"/"+githubApi.nameRepo+"/branches/master";
+    apiRequest("GET", url, null, function(r) {
+        var jsonRsp = JSON.parse(r);
+        var treeUrl = jsonRsp.commit.commit.tree.url+"?recursive=1";
+        //get tree
+        apiRequest("GET", treeUrl, null, function(r){
+            var jsonRsp = JSON.parse(r);
+            console.log(r);
+            for(var i in jsonRsp.tree) {
+                
+            }
+        });
+    });
+    return "test";
 }
