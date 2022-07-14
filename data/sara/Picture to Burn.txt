@@ -1,0 +1,4 @@
+Ranking: 10
+Strengths: [object HTMLTextAreaElement]
+Weaknesses: [object HTMLTextAreaElement]
+Notes: [object HTMLTextAreaElement]
